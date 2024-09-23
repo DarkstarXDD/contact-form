@@ -1,0 +1,24 @@
+.button {
+  width: 100%;
+  font-size: var(--fs-body-md);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+  background-color: var(--clr-green-600);
+  border: 2px solid var(--clr-green-600);
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: var(--clr-green-900);
+  border-color: var(--clr-green-900);
+  transform: scale(0.98);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: var(--clr-green-900);
+    border-color: var(--clr-green-900);
+  }
+}
