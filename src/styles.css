@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Karla";
+  font-weight: 200 800;
+  src: url("/assets/fonts/Karla-VariableFont_wght.woff2");
+}
+
+/* ------------------- CSS Reset ------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 0.125rem dotted green;
+  outline-offset: 0.125rem;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+/* ------------------- CSS Variables ------------------- */
+:root {
+  --ff-karla: "Karla", sans-serif;
+}
+/* ------------------- End of CSS Variables ------------------- */
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-karla);
+  color: hsl(0, 0%, 85%);
+  background-color: hsl(213, 13%, 14%);
+}
