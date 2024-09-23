@@ -36,6 +36,22 @@ button {
 /* ------------------- CSS Variables ------------------- */
 :root {
   --ff-karla: "Karla", sans-serif;
+
+  --fs-body-sm: 1rem;
+  --fs-body-md: 1.125rem;
+  --fs-heading: 2rem;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-red: hsl(0, 66%, 54%);
+
+  --clr-grey-500: hsl(186, 15%, 59%);
+  --clr-grey-900: hsl(187, 24%, 22%);
+
+  --clr-green-200: hsl(148, 38%, 91%);
+  --clr-green-600: hsl(169, 82%, 27%);
 }
 /* ------------------- End of CSS Variables ------------------- */
 
