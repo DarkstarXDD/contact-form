@@ -1,9 +1,7 @@
-import { useContext } from "react"
-
-import { FieldContext } from "../Field"
+import { useFieldContext } from "../Field"
 
 export default function Label({ children }) {
-  const controlId = useContext(FieldContext)
+  const controlId = useFieldContext()
   return (
     <>
       <label htmlFor={controlId}>{children}</label>
