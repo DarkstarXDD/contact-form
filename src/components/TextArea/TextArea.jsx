@@ -1,9 +1,20 @@
 import styles from "./TextArea.module.css"
 
-export default function TextArea({ name, id, ...props }) {
+import { useContext } from "react"
+
+import { FieldContext } from "../Field"
+
+export default function TextArea({ name, ...props }) {
+  const controlId = useContext(FieldContext)
+
   return (
     <>
-      <textarea name={name} id={id} {...props} className={styles.textarea} />
+      <textarea
+        name={name}
+        id={controlId}
+        {...props}
+        className={styles.textarea}
+      />
     </>
   )
 }

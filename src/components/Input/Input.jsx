@@ -1,12 +1,18 @@
 import styles from "./Input.module.css"
 
-export default function Input({ type = "text", name, id, ...props }) {
+import { useContext } from "react"
+
+import { FieldContext } from "../Field"
+
+export default function Input({ type = "text", name, ...props }) {
+  const controlId = useContext(FieldContext)
+
   return (
     <>
       <input
         type={type}
         name={name}
-        id={id}
+        id={controlId}
         {...props}
         className={styles.input}
       />
