@@ -1,0 +1,4 @@
+.requiredSymbol {
+  font-weight: var(--fw-bold);
+  color: var(--clr-green-600);
+}

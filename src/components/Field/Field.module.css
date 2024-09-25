@@ -1,11 +1,5 @@
-.fieldWrapperColumn {
+.fieldWrapper {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.fieldWrapperRow {
-  display: flex;
-  flex-direction: row;
-  gap: 0.75rem;
 }
