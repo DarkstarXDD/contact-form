@@ -1,16 +1,19 @@
 import styles from "./RadioButton.module.css"
 
-import useFieldContext from "../Field/FieldContext"
+import { useId } from "react"
 
-export default function RadioButton({ name, ...props }) {
-  const controlId = useFieldContext()
+export default function RadioButton({ name, children, ...props }) {
+  const controlId = useId()
   return (
-    <input
-      type="radio"
-      name={name}
-      id={controlId}
-      {...props}
-      className={styles.radioButton}
-    />
+    <label htmlFor={controlId} className={styles.radioLabel}>
+      <input
+        type="radio"
+        name={name}
+        id={controlId}
+        {...props}
+        className={styles.radioButton}
+      />
+      {children}
+    </label>
   )
 }

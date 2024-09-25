@@ -5,7 +5,6 @@ import Label from "../Label"
 import Input from "../Input"
 import Fieldset from "../Fieldset"
 import RadioButton from "../RadioButton"
-import RadioField from "../RadioField"
 import TextArea from "../TextArea"
 import Button from "../Button"
 
@@ -31,15 +30,8 @@ export default function Form() {
       </Field>
 
       <Fieldset legend="Query Type">
-        <RadioField>
-          <RadioButton name="queryType" />
-          <Label>General Enquiry</Label>
-        </RadioField>
-
-        <RadioField>
-          <RadioButton name="queryType" />
-          <Label>Support Request</Label>
-        </RadioField>
+        <RadioButton name="queryType">General Enquiry</RadioButton>
+        <RadioButton name="queryType">Support Request</RadioButton>
       </Fieldset>
 
       <Field>
