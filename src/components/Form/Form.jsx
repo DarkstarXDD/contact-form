@@ -6,6 +6,7 @@ import Input from "../Input"
 import Fieldset from "../Fieldset"
 import RadioButton from "../RadioButton"
 import TextArea from "../TextArea"
+import Checkbox from "../Checkbox"
 import Button from "../Button"
 
 export default function Form() {
@@ -38,6 +39,10 @@ export default function Form() {
         <Label>Message</Label>
         <TextArea name="message" rows="8" />
       </Field>
+
+      <Checkbox name="consent">
+        I consent to being contacted by the team
+      </Checkbox>
 
       <Button>Submit</Button>
     </form>

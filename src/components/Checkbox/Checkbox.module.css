@@ -1,0 +1,28 @@
+.checkboxFieldWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkbox {
+  appearance: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1px solid var(--clr-grey-500);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  border-color: var(--clr-green-600);
+  background-image: url("/assets/images/icon-checkbox-check.svg");
+  background-size: 1.125rem 1.125rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.checkboxLabel {
+  cursor: pointer;
+}
