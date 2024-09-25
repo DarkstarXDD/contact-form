@@ -1,0 +1,24 @@
+.radioButton {
+  appearance: none;
+  position: relative;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--clr-grey-500);
+  border-radius: 100vw;
+}
+
+.radioButton:checked {
+  border: 2px solid var(--clr-green-600);
+}
+
+.radioButton:checked::after {
+  position: absolute;
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: var(--clr-green-600);
+  border-radius: 100vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,17 @@
+.radioFieldWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--fs-body-md);
+  border: 1px solid var(--clr-grey-500);
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+}
+
+/* This is not working */
+.radioFieldWrapper:has(.radioButton:checked) {
+  background-color: red;
+}
