@@ -12,17 +12,18 @@ import Button from "../Button"
 export default function Form() {
   return (
     <form
+      noValidate
       onSubmit={(event) => event.preventDefault()}
       className={styles.formElementsWrapper}
     >
       <Field>
         <Label>First Name</Label>
-        <Input name="fname" />
+        <Input name="firstName" />
       </Field>
 
       <Field>
         <Label>Last Name</Label>
-        <Input name="lname" />
+        <Input name="lastName" />
       </Field>
 
       <Field>
