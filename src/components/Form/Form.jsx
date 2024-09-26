@@ -11,41 +11,46 @@ import Button from "../Button"
 
 export default function Form() {
   return (
-    <form
-      noValidate
-      onSubmit={(event) => event.preventDefault()}
-      className={styles.formElementsWrapper}
-    >
-      <Field>
-        <Label>First Name</Label>
-        <Input name="firstName" />
-      </Field>
+    <div className={styles.formWrapper}>
+      <h2 className={styles.formTitle}>Contact Us</h2>
+      <form
+        noValidate
+        onSubmit={(event) => event.preventDefault()}
+        className={styles.formElementsWrapper}
+      >
+        <Field>
+          <Label>First Name</Label>
+          <Input name="firstName" />
+        </Field>
 
-      <Field>
-        <Label>Last Name</Label>
-        <Input name="lastName" />
-      </Field>
+        <Field>
+          <Label>Last Name</Label>
+          <Input name="lastName" />
+        </Field>
 
-      <Field>
-        <Label>Email Address</Label>
-        <Input type="email" name="email" />
-      </Field>
+        <Field>
+          <Label>Email Address</Label>
+          <Input type="email" name="email" />
+        </Field>
 
-      <Fieldset legend="Query Type">
-        <RadioButton name="queryType">General Enquiry</RadioButton>
-        <RadioButton name="queryType">Support Request</RadioButton>
-      </Fieldset>
+        <Fieldset legend="Query Type">
+          <RadioButton name="queryType">General Enquiry</RadioButton>
+          <RadioButton name="queryType">Support Request</RadioButton>
+        </Fieldset>
 
-      <Field>
-        <Label>Message</Label>
-        <TextArea name="message" rows="8" />
-      </Field>
+        <div className={styles.formElementsBottomWrapper}>
+          <Field>
+            <Label>Message</Label>
+            <TextArea name="message" rows="8" />
+          </Field>
 
-      <Checkbox name="consent">
-        I consent to being contacted by the team
-      </Checkbox>
+          <Checkbox name="consent">
+            I consent to being contacted by the team
+          </Checkbox>
 
-      <Button>Submit</Button>
-    </form>
+          <Button>Submit</Button>
+        </div>
+      </form>
+    </div>
   )
 }

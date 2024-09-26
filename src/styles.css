@@ -55,6 +55,8 @@ textarea {
   --clr-green-200: hsl(148, 38%, 91%);
   --clr-green-600: hsl(169, 82%, 27%);
   --clr-green-900: hsl(169, 83%, 14%);
+
+  --border-width: 1px;
 }
 /* ------------------- End of CSS Variables ------------------- */
 
@@ -65,9 +67,10 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff-karla);
+  line-height: 1.5;
   color: var(--clr-grey-900);
-  background-color: var(--clr-white);
-  padding: 1.5rem;
+  background-color: var(--clr-green-200);
+  padding: 2rem 1rem;
 }
 
 #root {

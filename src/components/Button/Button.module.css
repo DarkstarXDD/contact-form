@@ -4,7 +4,7 @@
   font-weight: var(--fw-bold);
   color: var(--clr-white);
   background-color: var(--clr-green-600);
-  border: 2px solid var(--clr-green-600);
+  border: var(--border-width) solid var(--clr-green-600);
   border-radius: 8px;
   padding: 1rem;
   cursor: pointer;

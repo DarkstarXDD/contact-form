@@ -10,7 +10,7 @@
   appearance: none;
   width: 1.125rem;
   height: 1.125rem;
-  border: 1px solid var(--clr-grey-500);
+  border: var(--border-width) solid var(--clr-grey-500);
   border-radius: 4px;
   cursor: pointer;
 }

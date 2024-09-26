@@ -1,5 +1,33 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--clr-white);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .formWrapper {
+    padding: 2rem;
+  }
+}
+
+.formTitle {
+  font-size: var(--fs-heading);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
 .formElementsWrapper {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+
+.formElementsBottomWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
