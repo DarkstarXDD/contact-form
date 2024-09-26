@@ -33,14 +33,14 @@ export default function Form() {
           <Input type="email" name="email" />
         </Field>
 
-        {/* <Fieldset legend="Query Type">
+        <Fieldset legend="Query Type">
           <RadioButton name="queryType" value="general">
             General Enquiry
           </RadioButton>
           <RadioButton name="queryType" value="support">
             Support Request
           </RadioButton>
-        </Fieldset> */}
+        </Fieldset>
 
         <div className={styles.formElementsBottomWrapper}>
           <Field>
@@ -48,11 +48,11 @@ export default function Form() {
             <TextArea name="message" rows="8" />
           </Field>
 
-          {/* <Checkbox name="consent">
+          <Checkbox name="consent">
             I consent to being contacted by the team
-          </Checkbox> */}
+          </Checkbox>
 
-          {/* <Button>Submit</Button> */}
+          <Button>Submit</Button>
         </div>
       </form>
     </div>

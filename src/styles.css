@@ -73,8 +73,17 @@ body {
   padding: 2rem 1rem;
 }
 
-.main {
+@media (min-width: 48rem) {
+  body {
+    padding: 2rem 2.5rem;
+  }
+}
+
+#root {
   width: 100%;
+}
+
+.main {
   display: flex;
   flex-direction: column;
   justify-content: center;

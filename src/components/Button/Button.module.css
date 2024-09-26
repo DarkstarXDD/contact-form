@@ -1,5 +1,4 @@
 .button {
-  width: 100%;
   font-size: var(--fs-body-md);
   font-weight: var(--fw-bold);
   color: var(--clr-white);
