@@ -1,4 +1,5 @@
 .input {
+  width: 100%;
   font-size: var(--fs-body-md);
   border: var(--border-width) solid var(--clr-grey-500);
   border-radius: 8px;

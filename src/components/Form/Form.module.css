@@ -1,4 +1,5 @@
 .formWrapper {
+  max-width: 46rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +11,7 @@
 
 @media (min-width: 48rem) {
   .formWrapper {
-    padding: 2rem;
+    padding: 2.5rem;
   }
 }
 
