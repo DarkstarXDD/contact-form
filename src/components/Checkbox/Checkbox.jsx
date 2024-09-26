@@ -2,7 +2,14 @@ import styles from "./Checkbox.module.css"
 
 import { useId } from "react"
 
-export default function Checkbox({ name, children, ...props }) {
+import RequiredSymbol from "../RequiredSymbol"
+
+export default function Checkbox({
+  name,
+  children,
+  required = true,
+  ...props
+}) {
   const controlId = useId()
 
   return (
@@ -10,12 +17,14 @@ export default function Checkbox({ name, children, ...props }) {
       <input
         type="checkbox"
         name={name}
+        required={required}
         id={controlId}
         {...props}
         className={styles.checkbox}
       />
       <label htmlFor={controlId} className={styles.checkboxLabel}>
         {children}
+        {required && <RequiredSymbol />}
       </label>
     </div>
   )
