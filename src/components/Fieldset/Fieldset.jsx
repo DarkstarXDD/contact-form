@@ -1,9 +1,14 @@
 import styles from "./Fieldset.module.css"
 
-export default function Fieldset({ legend, children }) {
+import RequiredSymbol from "../RequiredSymbol"
+
+export default function Fieldset({ legend, children, required = true }) {
   return (
     <fieldset className={styles.fieldset}>
-      <legend className={styles.legend}>{legend}</legend>
+      <legend className={styles.legend}>
+        {legend}
+        {required && <RequiredSymbol />}
+      </legend>
       {children}
     </fieldset>
   )
