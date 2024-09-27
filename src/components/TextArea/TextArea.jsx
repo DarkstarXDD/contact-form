@@ -2,10 +2,8 @@ import styles from "./TextArea.module.css"
 
 import useFieldContext from "../Field/FieldContext"
 
-import ErrorMessage from "../ErrorMessage"
-
 export default function TextArea({ name, ...props }) {
-  const { controlId, required } = useFieldContext()
+  const { controlId, required, errorMessage } = useFieldContext()
 
   return (
     <>
@@ -14,9 +12,8 @@ export default function TextArea({ name, ...props }) {
         required={required}
         id={controlId}
         {...props}
-        className={styles.textarea}
+        className={`${styles.textArea} ${errorMessage ? styles.textAreaError : ""}`}
       />
-      <ErrorMessage>Error Message</ErrorMessage>
     </>
   )
 }

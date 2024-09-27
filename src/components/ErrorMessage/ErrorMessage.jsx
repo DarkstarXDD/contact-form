@@ -2,12 +2,16 @@ import styles from "./ErrorMessage.module.css"
 
 import useFieldContext from "../Field/FieldContext"
 
-export default function ErrorMessage({ children }) {
-  const { errorId } = useFieldContext()
+export default function ErrorMessage() {
+  const { errorId, errorMessage } = useFieldContext()
 
   return (
-    <p aria-live="assertive" id={errorId} className={styles.errorMessage}>
-      {children}
-    </p>
+    <>
+      {errorMessage && (
+        <p aria-live="assertive" id={errorId} className={styles.errorMessage}>
+          {errorMessage}
+        </p>
+      )}
+    </>
   )
 }

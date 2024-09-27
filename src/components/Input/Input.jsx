@@ -2,10 +2,8 @@ import styles from "./Input.module.css"
 
 import useFieldContext from "../Field/FieldContext"
 
-import ErrorMessage from "../ErrorMessage"
-
-export default function Input({ type = "text", name, ...props }) {
-  const { controlId, required, errorId } = useFieldContext()
+export default function Input({ type = "text", ...props }) {
+  const { name, controlId, required, errorId, errorMessage } = useFieldContext()
 
   return (
     <>
@@ -14,11 +12,11 @@ export default function Input({ type = "text", name, ...props }) {
         name={name}
         required={required}
         id={controlId}
+        aria-invalid={!!errorMessage}
         {...props}
-        className={styles.input}
+        className={`${styles.input} ${errorMessage ? styles.inputError : ""}`}
         aria-describedby={errorId}
       />
-      <ErrorMessage>Error Message</ErrorMessage>
     </>
   )
 }

@@ -1,6 +1,11 @@
-.textarea {
+.textArea {
   border: var(--border-width) solid var(--clr-grey-500);
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   resize: none;
+}
+
+.textAreaError {
+  border-color: var(--clr-red);
+  outline-color: var(--clr-red);
 }

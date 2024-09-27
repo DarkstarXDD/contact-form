@@ -4,3 +4,8 @@
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
 }
+
+.inputError {
+  border-color: var(--clr-red);
+  outline-color: var(--clr-red);
+}

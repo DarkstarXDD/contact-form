@@ -43,7 +43,6 @@ export default [
 
       "no-use-before-define": "error",
       "no-duplicate-imports": "error",
-      camelcase: "error",
 
       "react/jsx-no-target-blank": "off",
       "react/prop-types": "off",
