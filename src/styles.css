@@ -67,6 +67,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: var(--ff-karla);
+  font-size: var(--fs-body-sm);
   line-height: 1.5;
   color: var(--clr-grey-900);
   background-color: var(--clr-green-200);
