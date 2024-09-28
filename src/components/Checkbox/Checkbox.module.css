@@ -22,12 +22,3 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.checkboxLabel {
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: start;
-  gap: 0.5rem;
-}

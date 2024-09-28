@@ -6,6 +6,16 @@
   resize: none;
 }
 
+@media (hover: hover) {
+  .textArea:hover {
+    border-color: var(--clr-green-600);
+  }
+
+  .textAreaError:hover {
+    border-color: var(--clr-red);
+  }
+}
+
 @media (min-width: 48rem) {
   .textArea {
     min-height: 8.25rem;

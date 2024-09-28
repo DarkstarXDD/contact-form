@@ -5,6 +5,16 @@
   padding: 0.75rem 1.5rem;
 }
 
+@media (hover: hover) {
+  .input:hover {
+    border-color: var(--clr-green-600);
+  }
+
+  .inputError:hover {
+    border-color: var(--clr-red);
+  }
+}
+
 .inputError {
   border-color: var(--clr-red);
   outline-color: var(--clr-red);

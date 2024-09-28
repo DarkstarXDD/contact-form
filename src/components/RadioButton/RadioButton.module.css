@@ -11,6 +11,16 @@
   cursor: pointer;
 }
 
+@media (hover: hover) {
+  .radioLabel:hover {
+    border-color: var(--clr-green-600);
+  }
+
+  .radioLabel:hover .radioButton {
+    border-color: var(--clr-green-600);
+  }
+}
+
 .radioLabel:has(.radioButton:checked) {
   background-color: var(--clr-green-200);
 }
