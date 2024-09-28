@@ -53,17 +53,19 @@ export default function Form() {
           onSubmit={handleSubmit}
           className={styles.formElementsWrapper}
         >
-          <Field name="firstName">
-            <Label>First Name</Label>
-            <Input />
-            <ErrorMessage />
-          </Field>
+          <div className={styles.namesWrapper}>
+            <Field name="firstName">
+              <Label>First Name</Label>
+              <Input />
+              <ErrorMessage />
+            </Field>
 
-          <Field name="lastName">
-            <Label>Last Name</Label>
-            <Input />
-            <ErrorMessage />
-          </Field>
+            <Field name="lastName">
+              <Label>Last Name</Label>
+              <Input />
+              <ErrorMessage />
+            </Field>
+          </div>
 
           <Field name="email">
             <Label>Email Address</Label>
@@ -72,15 +74,17 @@ export default function Form() {
           </Field>
 
           <Fieldset name="queryType" legend="Query Type">
-            <RadioButton value="general">General Enquiry</RadioButton>
-            <RadioButton value="support">Support Request</RadioButton>
+            <div className={styles.radioWrapper}>
+              <RadioButton value="general">General Enquiry</RadioButton>
+              <RadioButton value="support">Support Request</RadioButton>
+            </div>
             <FieldsetErrorMessage />
           </Fieldset>
 
           <div className={styles.formElementsBottomWrapper}>
             <Field name="message">
               <Label>Message</Label>
-              <TextArea rows="8" />
+              <TextArea />
               <ErrorMessage />
             </Field>
 

@@ -1,8 +1,21 @@
 .textArea {
+  min-height: 15rem;
   border: var(--border-width) solid var(--clr-grey-500);
   border-radius: 8px;
   padding: 0.75rem 1.5rem;
   resize: none;
+}
+
+@media (min-width: 48rem) {
+  .textArea {
+    min-height: 8.25rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .textArea {
+    min-height: 6.5rem;
+  }
 }
 
 .textAreaError {

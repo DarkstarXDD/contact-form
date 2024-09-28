@@ -33,3 +33,25 @@
   flex-direction: column;
   gap: 2.5rem;
 }
+
+.namesWrapper {
+  display: grid;
+  gap: 1.5rem 1rem;
+}
+
+@media (min-width: 48rem) {
+  .namesWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.radioWrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .radioWrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
