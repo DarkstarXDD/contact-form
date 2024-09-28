@@ -1,16 +1,9 @@
 import styles from "./Checkbox.module.css"
 
-import { useId } from "react"
+import useFieldContext from "../Field/FieldContext"
 
-import RequiredSymbol from "../RequiredSymbol"
-
-export default function Checkbox({
-  name,
-  children,
-  required = true,
-  ...props
-}) {
-  const controlId = useId()
+export default function Checkbox({ ...props }) {
+  const { name, controlId, required, errorId } = useFieldContext()
 
   return (
     <div className={styles.checkboxFieldWrapper}>
@@ -19,13 +12,10 @@ export default function Checkbox({
         name={name}
         required={required}
         id={controlId}
+        aria-describedby={errorId}
         {...props}
         className={styles.checkbox}
       />
-      <label htmlFor={controlId} className={styles.checkboxLabel}>
-        {children}
-        {required && <RequiredSymbol />}
-      </label>
     </div>
   )
 }

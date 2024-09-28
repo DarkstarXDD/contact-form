@@ -82,9 +82,11 @@ export default function Form() {
             <ErrorMessage />
           </Field>
 
-          <Checkbox name="consent">
-            I consent to being contacted by the team
-          </Checkbox>
+          <Field name="consent" errors={zodErrorsObject} layout="row">
+            <Checkbox />
+            <Label>I consent to being contacted by the team</Label>
+            <ErrorMessage />
+          </Field>
 
           <Button>Submit</Button>
         </div>

@@ -1,4 +1,5 @@
 .errorMessage {
   font-size: var(--fs-body-sm);
   color: var(--clr-red);
+  grid-area: errorMessage;
 }

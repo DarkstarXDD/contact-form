@@ -3,3 +3,12 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.fieldWrapperRow {
+  display: grid;
+  grid-template-columns: 1.125rem auto;
+  gap: 0.5rem 1rem;
+  grid-template-areas:
+    "checkbox label"
+    "errorMessage errorMessage";
+}
