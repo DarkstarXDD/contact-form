@@ -78,7 +78,7 @@ export default function Form() {
         <div className={styles.formElementsBottomWrapper}>
           <Field name="message" errors={zodErrorsObject}>
             <Label>Message</Label>
-            <TextArea name="message" rows="8" />
+            <TextArea rows="8" />
             <ErrorMessage />
           </Field>
 

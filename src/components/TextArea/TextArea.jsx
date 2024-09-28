@@ -2,8 +2,8 @@ import styles from "./TextArea.module.css"
 
 import useFieldContext from "../Field/FieldContext"
 
-export default function TextArea({ name, ...props }) {
-  const { controlId, required, errorMessage } = useFieldContext()
+export default function TextArea({ ...props }) {
+  const { name, controlId, required, errorMessage } = useFieldContext()
 
   return (
     <>
