@@ -3,6 +3,8 @@ import styles from "./Form.module.css"
 import { useState } from "react"
 import { z } from "zod"
 
+import { FormContext } from "./FormContext"
+
 import Field from "../Field"
 import Label from "../Label"
 import Input from "../Input"
@@ -44,51 +46,54 @@ export default function Form() {
   return (
     <div className={styles.formWrapper}>
       <h2 className={styles.formTitle}>Contact Us</h2>
-      <form
-        noValidate
-        onSubmit={handleSubmit}
-        className={styles.formElementsWrapper}
-      >
-        <Field name="firstName" errors={zodErrorsObject}>
-          <Label>First Name</Label>
-          <Input />
-          <ErrorMessage />
-        </Field>
 
-        <Field name="lastName" errors={zodErrorsObject}>
-          <Label>Last Name</Label>
-          <Input />
-          <ErrorMessage />
-        </Field>
-
-        <Field name="email" errors={zodErrorsObject}>
-          <Label>Email Address</Label>
-          <Input type="email" />
-          <ErrorMessage />
-        </Field>
-
-        <Fieldset name="queryType" legend="Query Type" errors={zodErrorsObject}>
-          <RadioButton value="general">General Enquiry</RadioButton>
-          <RadioButton value="support">Support Request</RadioButton>
-          <FieldsetErrorMessage />
-        </Fieldset>
-
-        <div className={styles.formElementsBottomWrapper}>
-          <Field name="message" errors={zodErrorsObject}>
-            <Label>Message</Label>
-            <TextArea rows="8" />
+      <FormContext.Provider value={{ errors: zodErrorsObject }}>
+        <form
+          noValidate
+          onSubmit={handleSubmit}
+          className={styles.formElementsWrapper}
+        >
+          <Field name="firstName">
+            <Label>First Name</Label>
+            <Input />
             <ErrorMessage />
           </Field>
 
-          <Field name="consent" errors={zodErrorsObject} layout="row">
-            <Checkbox />
-            <Label>I consent to being contacted by the team</Label>
+          <Field name="lastName">
+            <Label>Last Name</Label>
+            <Input />
             <ErrorMessage />
           </Field>
 
-          <Button>Submit</Button>
-        </div>
-      </form>
+          <Field name="email">
+            <Label>Email Address</Label>
+            <Input type="email" />
+            <ErrorMessage />
+          </Field>
+
+          <Fieldset name="queryType" legend="Query Type">
+            <RadioButton value="general">General Enquiry</RadioButton>
+            <RadioButton value="support">Support Request</RadioButton>
+            <FieldsetErrorMessage />
+          </Fieldset>
+
+          <div className={styles.formElementsBottomWrapper}>
+            <Field name="message">
+              <Label>Message</Label>
+              <TextArea rows="8" />
+              <ErrorMessage />
+            </Field>
+
+            <Field name="consent" layout="row">
+              <Checkbox />
+              <Label>I consent to being contacted by the team</Label>
+              <ErrorMessage />
+            </Field>
+
+            <Button>Submit</Button>
+          </div>
+        </form>
+      </FormContext.Provider>
     </div>
   )
 }

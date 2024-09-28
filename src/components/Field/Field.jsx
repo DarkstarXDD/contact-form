@@ -2,15 +2,12 @@ import styles from "./Field.module.css"
 
 import { useId } from "react"
 
+import useFormContext from "../Form/FormContext"
 import { FieldContext } from "./FieldContext"
 
-export default function Field({
-  name,
-  children,
-  required = true,
-  errors,
-  layout,
-}) {
+export default function Field({ name, children, required = true, layout }) {
+  const { errors } = useFormContext()
+
   const controlId = useId()
   const errorId = useId()
 

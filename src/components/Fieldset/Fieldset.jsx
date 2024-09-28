@@ -4,15 +4,12 @@ import RequiredSymbol from "../RequiredSymbol"
 
 import { useId } from "react"
 
+import useFormContext from "../Form/FormContext"
 import { FieldsetContext } from "./FieldsetContext"
 
-export default function Fieldset({
-  name,
-  legend,
-  children,
-  required = true,
-  errors,
-}) {
+export default function Fieldset({ name, legend, children, required = true }) {
+  const { errors } = useFormContext()
+
   const errorId = useId()
   const errorMessage = (errors && errors[name]) || null
 
