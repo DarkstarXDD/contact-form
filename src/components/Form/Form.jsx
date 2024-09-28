@@ -12,6 +12,7 @@ import TextArea from "../TextArea"
 import Checkbox from "../Checkbox"
 import Button from "../Button"
 import ErrorMessage from "../ErrorMessage"
+import FieldsetErrorMessage from "../FieldsetErrorMessage"
 
 export default function Form() {
   const [zodErrorsObject, setZodErrorsObject] = useState({})
@@ -66,13 +67,10 @@ export default function Form() {
           <ErrorMessage />
         </Field>
 
-        <Fieldset legend="Query Type">
-          <RadioButton name="queryType" value="general">
-            General Enquiry
-          </RadioButton>
-          <RadioButton name="queryType" value="support">
-            Support Request
-          </RadioButton>
+        <Fieldset name="queryType" legend="Query Type" errors={zodErrorsObject}>
+          <RadioButton value="general">General Enquiry</RadioButton>
+          <RadioButton value="support">Support Request</RadioButton>
+          <FieldsetErrorMessage />
         </Fieldset>
 
         <div className={styles.formElementsBottomWrapper}>

@@ -2,10 +2,10 @@ import styles from "./RadioButton.module.css"
 
 import { useId } from "react"
 
-import useFieldSetContext from "../Fieldset/FieldsetContext"
+import useFieldsetContext from "../Fieldset/FieldsetContext"
 
-export default function RadioButton({ name, children, ...props }) {
-  const { required } = useFieldSetContext()
+export default function RadioButton({ children, ...props }) {
+  const { name, required, errorId } = useFieldsetContext()
   const controlId = useId()
 
   return (
@@ -14,6 +14,7 @@ export default function RadioButton({ name, children, ...props }) {
         type="radio"
         name={name}
         required={required}
+        aria-describedby={errorId}
         id={controlId}
         {...props}
         className={styles.radioButton}

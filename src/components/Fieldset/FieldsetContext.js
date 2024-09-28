@@ -2,7 +2,7 @@ import { createContext, useContext } from "react"
 
 export const FieldsetContext = createContext()
 
-export default function useFieldSetContext() {
+export default function useFieldsetContext() {
   const context = useContext(FieldsetContext)
 
   if (!context) {
