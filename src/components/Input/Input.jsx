@@ -13,9 +13,9 @@ export default function Input({ type = "text", ...props }) {
         required={required}
         id={controlId}
         aria-invalid={!!errorMessage}
+        aria-describedby={errorId}
         {...props}
         className={`${styles.input} ${errorMessage ? styles.inputError : ""}`}
-        aria-describedby={errorId}
       />
     </>
   )
