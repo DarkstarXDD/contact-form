@@ -4,14 +4,13 @@ import useFieldContext from "../Field/FieldContext"
 
 export default function ErrorMessage() {
   const { errorId, errorMessage } = useFieldContext()
+  const className = errorMessage ? styles.errorMessage : "visually-hidden"
 
   return (
     <>
-      {errorMessage && (
-        <p aria-live="assertive" id={errorId} className={styles.errorMessage}>
-          {errorMessage}
-        </p>
-      )}
+      <p aria-live="assertive" id={errorId} className={className}>
+        {errorMessage}
+      </p>
     </>
   )
 }

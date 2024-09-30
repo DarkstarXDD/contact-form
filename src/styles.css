@@ -60,6 +60,15 @@ textarea {
 }
 /* ------------------- End of CSS Variables ------------------- */
 
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 body {
   min-height: 100dvh;
   display: flex;
