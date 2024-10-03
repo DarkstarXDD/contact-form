@@ -29,20 +29,17 @@
   gap: 1.5rem;
 }
 
-.formElementsBottomWrapper {
+.namesWrapper {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-}
-
-.namesWrapper {
-  display: grid;
-  gap: 1.5rem 1rem;
+  gap: 1.5rem;
 }
 
 @media (min-width: 48rem) {
   .namesWrapper {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1rem;
   }
 }
 
@@ -55,4 +52,10 @@
   .radioWrapper {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+.formElementsBottomWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
