@@ -15,6 +15,7 @@ import Checkbox from "../Checkbox"
 import Button from "../Button"
 import ErrorMessage from "../ErrorMessage"
 import FieldsetErrorMessage from "../FieldsetErrorMessage"
+import Toast from "../Toast"
 
 export default function Form() {
   const [zodErrorsObject, setZodErrorsObject] = useState({})
@@ -44,60 +45,68 @@ export default function Form() {
   }
 
   return (
-    <div className={styles.formWrapper}>
-      <h2 className={styles.formTitle}>Contact Us</h2>
+    <>
+      <div className={styles.formWrapper}>
+        <h2 className={styles.formTitle}>Contact Us</h2>
 
-      <FormContext.Provider value={{ errors: zodErrorsObject }}>
-        <form
-          noValidate
-          onSubmit={handleSubmit}
-          className={styles.formElementsWrapper}
-        >
-          <div className={styles.namesWrapper}>
-            <Field name="firstName">
-              <Label>First Name</Label>
-              <Input />
-              <ErrorMessage />
-            </Field>
+        <FormContext.Provider value={{ errors: zodErrorsObject }}>
+          <form
+            noValidate
+            onSubmit={handleSubmit}
+            className={styles.formElementsWrapper}
+          >
+            <div className={styles.namesWrapper}>
+              <Field name="firstName">
+                <Label>First Name</Label>
+                <Input />
+                <ErrorMessage />
+              </Field>
 
-            <Field name="lastName">
-              <Label>Last Name</Label>
-              <Input />
-              <ErrorMessage />
-            </Field>
-          </div>
-
-          <Field name="email">
-            <Label>Email Address</Label>
-            <Input type="email" />
-            <ErrorMessage />
-          </Field>
-
-          <Fieldset name="queryType" legend="Query Type">
-            <div className={styles.radioWrapper}>
-              <RadioButton value="general">General Enquiry</RadioButton>
-              <RadioButton value="support">Support Request</RadioButton>
+              <Field name="lastName">
+                <Label>Last Name</Label>
+                <Input />
+                <ErrorMessage />
+              </Field>
             </div>
-            <FieldsetErrorMessage />
-          </Fieldset>
 
-          <div className={styles.formElementsBottomWrapper}>
-            <Field name="message">
-              <Label>Message</Label>
-              <TextArea />
+            <Field name="email">
+              <Label>Email Address</Label>
+              <Input type="email" />
               <ErrorMessage />
             </Field>
 
-            <Field name="consent" layout="row">
-              <Checkbox />
-              <Label>I consent to being contacted by the team</Label>
-              <ErrorMessage />
-            </Field>
+            <Fieldset name="queryType" legend="Query Type">
+              <div className={styles.radioWrapper}>
+                <RadioButton value="general">General Enquiry</RadioButton>
+                <RadioButton value="support">Support Request</RadioButton>
+              </div>
+              <FieldsetErrorMessage />
+            </Fieldset>
 
-            <Button>Submit</Button>
-          </div>
-        </form>
-      </FormContext.Provider>
-    </div>
+            <div className={styles.formElementsBottomWrapper}>
+              <Field name="message">
+                <Label>Message</Label>
+                <TextArea />
+                <ErrorMessage />
+              </Field>
+
+              <Field name="consent" layout="row">
+                <Checkbox />
+                <Label>I consent to being contacted by the team</Label>
+                <ErrorMessage />
+              </Field>
+
+              <Button>Submit</Button>
+            </div>
+          </form>
+        </FormContext.Provider>
+      </div>
+
+      <Toast
+        icon="/assets/images/icon-success-check.svg"
+        title="Message Sent!"
+        message="Thanks for completing the form. We’ll be in touch soon!"
+      />
+    </>
   )
 }

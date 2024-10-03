@@ -1,0 +1,43 @@
+.toastWrapper {
+  position: absolute;
+  top: 0;
+  padding: 1.5rem;
+  animation: toastSlideIn 0.6s cubic-bezier(0, 0.63, 0.81, 1);
+}
+
+@keyframes toastSlideIn {
+  from {
+    top: -16rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .toastWrapper {
+    animation: none;
+  }
+}
+
+.toast {
+  max-width: 28.125rem;
+  display: grid;
+  grid-template-columns: 1.25rem auto;
+  gap: 0.5rem;
+  grid-template-areas:
+    "icon title"
+    "message message";
+  align-items: center;
+  background-color: var(--clr-grey-900);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.toastTitle {
+  font-size: var(--fs-body-md);
+  font-weight: var(--fw-bold);
+  color: var(--clr-white);
+}
+
+.toastText {
+  color: var(--clr-green-200);
+  grid-area: message;
+}
