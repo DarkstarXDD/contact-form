@@ -1,5 +1,5 @@
 .toastWrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   padding: 1.5rem;
   animation: toastSlideIn 0.6s cubic-bezier(0, 0.63, 0.81, 1);
@@ -29,6 +29,11 @@
   background-color: var(--clr-grey-900);
   border-radius: 12px;
   padding: 1.5rem;
+}
+
+.toastIcon {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .toastTitle {
