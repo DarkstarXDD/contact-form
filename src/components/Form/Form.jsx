@@ -107,13 +107,20 @@ export default function Form() {
         </FormContext.Provider>
       </div>
 
-      {isFormValid && (
+      {/* {isFormValid && (
         <Toast
           icon="/assets/images/icon-success-check.svg"
           title="Message Sent!"
           message="Thanks for completing the form. We’ll be in touch soon!"
         />
-      )}
+      )} */}
+
+      <Toast
+        isFormValid={isFormValid}
+        icon="/assets/images/icon-success-check.svg"
+        title="Message Sent!"
+        message="Thanks for completing the form. We’ll be in touch soon!"
+      />
     </>
   )
 }
