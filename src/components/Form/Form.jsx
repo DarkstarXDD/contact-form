@@ -18,7 +18,7 @@ import FieldsetErrorMessage from "../FieldsetErrorMessage"
 import Toast from "../Toast"
 
 export default function Form() {
-  const [isFormValid, setIsFormValid] = useState(false)
+  const [isToastVisible, setIsToastVisible] = useState(false)
   const [zodErrorsObject, setZodErrorsObject] = useState({})
 
   const formSchema = z.object({
@@ -42,11 +42,15 @@ export default function Form() {
 
     if (!parseResult.success) {
       setZodErrorsObject(parseResult.error.flatten().fieldErrors)
-      setIsFormValid(false)
+      setIsToastVisible(false)
     } else {
       setZodErrorsObject({})
-      setIsFormValid(true)
+      setIsToastVisible(true)
     }
+  }
+
+  function closeToast() {
+    setIsToastVisible(false)
   }
 
   return (
@@ -107,16 +111,9 @@ export default function Form() {
         </FormContext.Provider>
       </div>
 
-      {/* {isFormValid && (
-        <Toast
-          icon="/assets/images/icon-success-check.svg"
-          title="Message Sent!"
-          message="Thanks for completing the form. We’ll be in touch soon!"
-        />
-      )} */}
-
       <Toast
-        isFormValid={isFormValid}
+        isToastVisible={isToastVisible}
+        closeToast={closeToast}
         icon="/assets/images/icon-success-check.svg"
         title="Message Sent!"
         message="Thanks for completing the form. We’ll be in touch soon!"
