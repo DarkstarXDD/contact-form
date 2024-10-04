@@ -1,5 +1,7 @@
 import styles from "./Toast.module.css"
 
+import { useEffect } from "react"
+
 import { FiX } from "react-icons/fi"
 
 export default function Toast({
@@ -10,6 +12,20 @@ export default function Toast({
   closeToast,
 }) {
   const className = isToastVisible ? styles.toastWrapper : "visually-hidden"
+
+  useEffect(() => {
+    function handleKeyDown(event) {
+      if (event.code === "Escape") {
+        closeToast()
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [])
 
   return (
     <div aria-live="assertive" className={className}>
