@@ -40,6 +40,16 @@ This is my solution to the [Contact Form](https://www.frontendmentor.io/challeng
 
 #
 
+### Notes. 📌
+
+Based on some feedback i received, there are a few things i would like to improve in this solution if i revisit this again:
+
+- Move the focus to the first input field with an error message (if any errors are present), after a submit attempt.
+- When an error is present, it should then re-validate `onChange`, so the error disappears immediately, rather than waiting until submission.
+- Validate `onBlur` rather than waiting for the submit event.
+
+#
+
 ### Testing and Accessibility. 🧪
 
 - Tested site usability with keyboard-only navigation.
