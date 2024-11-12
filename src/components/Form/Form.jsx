@@ -56,7 +56,7 @@ export default function Form() {
   return (
     <>
       <div className={styles.formWrapper}>
-        <h2 className={styles.formTitle}>Contact Us</h2>
+        <h1 className={styles.formTitle}>Contact Us</h1>
 
         <FormContext.Provider value={{ errors: zodErrorsObject }}>
           <form
